@@ -15,8 +15,8 @@
          <%= link_to 'Flixter', root_path, class: 'home-icon' %>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">See all courses <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <%= link_to 'See All Courses', courses_path, class: 'nav-link' %>
             </li>
             <% if user_signed_in? %>
             <li class="nav-item navbar-toggler-right">
