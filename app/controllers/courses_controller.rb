@@ -14,6 +14,6 @@ class CoursesController < ApplicationController
   private
 
   def image_params
-    params.require(:courses).permit(:caption, :picture, :image_id)
+    params.require(:courses).permit(:caption, :image, :image_id)
   end
 end
