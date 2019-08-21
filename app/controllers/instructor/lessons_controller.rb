@@ -6,10 +6,10 @@ class Instructor::LessonsController < ApplicationController
     @lesson = Lesson.new
   end
 
-    def create
-      @lesson = current_section.lessons.create(lesson_params)
-      redirect_to instructor_course_path(current_section.course)
-    end
+  def create
+    @lesson = current_section.lessons.create(lesson_params)
+    redirect_to instructor_course_path(current_section.course)
+  end
 
   private
 
