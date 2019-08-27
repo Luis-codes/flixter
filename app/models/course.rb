@@ -4,6 +4,9 @@ class Course < ApplicationRecord
   belongs_to :user
   has_many :sections
   has_many :enrollments
+
+  include RankedModel
+  ranks :row_order, with_same: :course_id
   
   validates :title, presence: true
   validates :description, presence: true
