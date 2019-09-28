@@ -20,10 +20,12 @@
 <script>
   $(function() {
     $('.sections').sortable({
-      update: function( event, ui ) {
+      update: function( event, ui ) { 
+        console.log(ui.item.data('updateUrl'))
+        console.log(event)
         $.ajax({
           type: 'PUT',
-          url: ui.item.data('update_url'),
+          url: ui.item.data('updateUrl'),
           dataType: 'json',
           data: { section: {row_order_position: ui.item.index() } }
         });
